@@ -81,7 +81,7 @@ function drawSearchState()
     const half_cell = CELL_SIZE / 2;
 
     // visited nodes
-    fill(34, 139, 34);
+    fill(34, 139, 34, 127);
     noStroke();
     for (let node of Array.from(currentSearch.visited))
     {
@@ -90,7 +90,7 @@ function drawSearchState()
     }
     
     // border nodes
-    fill(120, 6, 6);
+    fill(255, 6, 6, 127);
     noStroke();
     for (let node of currentSearch.frontier)
     {
@@ -104,11 +104,15 @@ function drawSearchState()
         strokeWeight(3);
         noFill();
         beginShape();
+        
+        vertex(agent.start_x * CELL_SIZE + half_cell, 
+               agent.start_y * CELL_SIZE + half_cell);
         for (let node of currentSearch.path)
         {
             vertex(node.x * CELL_SIZE + half_cell, 
                    node.y * CELL_SIZE + half_cell);
         }
+
         endShape();
     }
 }
