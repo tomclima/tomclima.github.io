@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agente Autônomo com Busca</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agente Autônomo com Busca</h1>
+        
+        <div class="controls">
+            <fieldset id="searchOptions">
+                <legend>Tipo de Busca</legend>
+                <label><input type="radio" name="searchType" value="bfs" checked> BFS</label>
+                <label><input type="radio" name="searchType" value="dfs"> DFS</label>
+                <!-- <label><input type="radio" name="searchType" value="ucs"> UCS</label> 
+                <label><input type="radio" name="searchType" value="greedy"> Greedy</label>
+                <label><input type="radio" name="searchType" value="astar"> A*</label> -->
+            </fieldset>
+
+            <button id="btnStart" onclick="startSearch()">Iniciar</button>
+            <button id="resetEnvBtn" onclick="resetEnvironment()">Novo Mapa</button>
+        </div>
+
+        <div class="info">
+            <p>Comidas coletadas: <span id="foodCount">0</span></p>
+            <p>Custo total: <span id="totalCost">0</span></p>
+        </div>
+
+        <div id="canvasContainer"></div>
+    </div>
+
+    <script src="./buttons.js"></script>
+    <script src="./config.js"></script>
+    <script src="./node.js"></script>
+    <script src="./agent.js"></script>
+    <script src="./search_algorithms.js"></script>
+    <script src="./environment.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
