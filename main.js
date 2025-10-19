@@ -1,3 +1,6 @@
+let lastStepTime = 0;
+const STEP_DELAY = 150;
+
 function setup()
 {
     // creates canvas inside container
@@ -23,7 +26,12 @@ function draw()
     }
     else if (searchInProgress && !agent.moving)
     {
-        continueSearch();
+        const now = millis(); // tempo atual em ms desde o início do sketch
+        if (now - lastStepTime > STEP_DELAY)
+        {
+            continueSearch();
+            lastStepTime = now;
+        }
     }
 }
 

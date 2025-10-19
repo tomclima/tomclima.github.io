@@ -39,22 +39,27 @@ function bfsSearchStep()
         return; 
     }
     
+    // FIFO
     const currentNode = currentSearch.frontier.shift();
     
+    // found the food
     if (currentNode.x === food.x && currentNode.y === food.y)
     {
         currentSearch.path = reconstructPath(currentNode);
         agent.setPath(currentSearch.path);
         searchInProgress = false;
+
         return;
     }
     
+    // adding the neighbors in the frontier array
     for (let neighbor of getNeighbors(currentNode))
     {
         const neighborStr = nodeToString(neighbor);
-        if (!currentSearch.visited.has(neighborStr))
+        if (!currentSearch.visited.has(neighborStr)) // not visited
         {
             currentSearch.visited.add(neighborStr);
+
             const neighborNode = new Node(neighbor.x, neighbor.y, currentNode);
             currentSearch.frontier.push(neighborNode);
         }
@@ -76,23 +81,28 @@ function dfsSearchStep()
         searchInProgress = false;
         return;
     }
-    
+
+    // LIFO
     const currentNode = currentSearch.frontier.pop();
     
+    // found the food
     if (currentNode.x === food.x && currentNode.y === food.y)
     {
         currentSearch.path = reconstructPath(currentNode);
         agent.setPath(currentSearch.path);
         searchInProgress = false;
+
         return;
     }
     
+    // adding the neighbors in the frontier array
     for (let neighbor of getNeighbors(currentNode))
     {
         const neighborStr = nodeToString(neighbor);
-        if (!currentSearch.visited.has(neighborStr))
+        if (!currentSearch.visited.has(neighborStr)) // not visited
         {
             currentSearch.visited.add(neighborStr);
+            
             const neighborNode = new Node(neighbor.x, neighbor.y, currentNode);
             currentSearch.frontier.push(neighborNode);
         }
