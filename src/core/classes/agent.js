@@ -18,6 +18,12 @@ class Agent
         this.currentPathIndex = 0;
         this.moving = false;
     }
+
+    resetStartPos()
+    {
+        this.start_x = this.x;
+        this.start_y = this.y;
+    }
     
     setPath(path)
     {
@@ -75,11 +81,11 @@ class Agent
                 totalCost = 0;
 
                 setTimeout(() => {
-                    this.reset();
+                    this.resetStartPos();
                     placeFood();
                     startSearch();
                     document.getElementById("totalCost").innerText = totalCost;
-                }, 1000);
+                }, 1500);
             }
 
             // finished the path
