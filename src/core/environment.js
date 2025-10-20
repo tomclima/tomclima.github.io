@@ -1,8 +1,8 @@
 function generateGrid()
 {
     let obstacle_prob = 10 / 100; // 10%
-    let sand_prob = 40 / 100; // 40%
-    let mud_prob = 30 / 100; // 30%
+    let sand_prob = 50 / 100; // 50%
+    let mud_prob = 20 / 100; // 20%
     // let water_prob = 20 / 100; // 20%
 
     grid = [];

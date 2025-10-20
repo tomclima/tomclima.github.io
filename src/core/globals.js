@@ -1,5 +1,5 @@
 // environment configuration
-const GRID_SIZE = 12;
+const GRID_SIZE = 24;
 const CELL_SIZE = 40;
 const TERRAIN_TYPES = {
     OBSTACLE: 0,

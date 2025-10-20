@@ -1,5 +1,5 @@
 let lastStepTime = 0;
-const STEP_DELAY = 150;
+const STEP_DELAY = 50;
 
 function setup()
 {
