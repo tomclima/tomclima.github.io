@@ -11,6 +11,9 @@ Projeto da cadeira de Sistemas Inteligentes do CIn-UFPE
 
 ## Como executar
 
+> Obs: para inicar uma busca diferente é necessário dar _refresh_ na página <br>
+>_(F5 ou Ctrl+R)_
+
 ### Modo 1 _(python3 server)_
 1. Execute:
 
