@@ -213,3 +213,56 @@ function greedySearchStep()
     }
 }
 // endregion Greedy
+
+
+// region A*
+function initializeAStarSearch()
+{
+    const heuristic = manhattanDistance(agent.x, agent.y, food.x, food.y);
+    const startNode = new Node(agent.x, agent.y, null, 0, heuristic);
+
+    currentSearch.frontier = [startNode];
+}
+
+function aStarSearchStep()
+{
+    if (currentSearch.frontier.length === 0)
+    {
+        searchInProgress = false;
+        return;
+    }
+    
+    // sorts based on totalCost (cost + heuristic)
+    currentSearch.frontier.sort((a, b) => a.totalCost - b.totalCost);
+    const currentNode = currentSearch.frontier.shift(); // lower totalCost
+    const currentStr = nodeToString(currentNode);
+    
+    if (currentSearch.visited.has(currentStr)) { return; }
+    currentSearch.visited.add(currentStr);
+    
+    // found the food
+    if (currentNode.x === food.x && currentNode.y === food.y)
+    {
+        currentSearch.path = reconstructPath(currentNode);
+        agent.setPath(currentSearch.path);
+        searchInProgress = false;
+
+        return;
+    }
+    
+    // adding neighbors to the frontier array
+    for (let neighbor of getNeighbors(currentNode))
+    {
+        const neighborStr = nodeToString(neighbor);
+        if (!currentSearch.visited.has(neighborStr)) // not visited
+        {
+            const terrainCost = TERRAIN_COSTS[grid[neighbor.y][neighbor.x]];
+            const newCost = currentNode.cost + terrainCost;
+            const heuristic = manhattanDistance(neighbor.x, neighbor.y, food.x, food.y);
+            const neighborNode = new Node(neighbor.x, neighbor.y, currentNode, newCost, heuristic);
+
+            currentSearch.frontier.push(neighborNode);
+        }
+    }
+}
+// endregion A*
