@@ -119,18 +119,22 @@ function drawSearchState()
 
 function drawFood()
 {
-    fill(255, 0, 0);
+    push();
     noStroke();
-    ellipse(food.x * CELL_SIZE + CELL_SIZE/2, 
-           food.y * CELL_SIZE + CELL_SIZE/2, 
-           CELL_SIZE * 0.8, CELL_SIZE * 0.8);
+    fill(225, 173, 1);
+    circle(food.x * CELL_SIZE + CELL_SIZE/2, food.y * CELL_SIZE + CELL_SIZE/2, CELL_SIZE * 0.7);
+    pop();
 }
 
 function drawAgent()
 {
-    fill(0, 0, 255);
+    push();
     noStroke();
-    ellipse(agent.x * CELL_SIZE + CELL_SIZE/2, 
-           agent.y * CELL_SIZE + CELL_SIZE/2, 
-           CELL_SIZE * 0.6, CELL_SIZE * 0.6);
+
+    drawingContext.shadowBlur = 20;
+    drawingContext.shadowColor = color(0, 255, 255);
+
+    fill(0, 255, 255);
+    circle(agent.x * CELL_SIZE + CELL_SIZE/2, agent.y * CELL_SIZE + CELL_SIZE/2, CELL_SIZE/2);
+    pop();
 }
