@@ -134,7 +134,7 @@ function ucsSearchStep()
     const currentNode = currentSearch.frontier.shift(); // lower cost
     const currentStr = nodeToString(currentNode);
     
-    if (currentSearch.visited.has(currentStr)) { return; }
+    if (currentSearch.visited.has(currentStr)) { return; } // already visited
     currentSearch.visited.add(currentStr);
     
     // found the food
@@ -162,3 +162,54 @@ function ucsSearchStep()
     }
 }
 // endregion UCS
+
+
+// region Greedy
+function initializeGreedySearch()
+{
+    const heuristic = manhattanDistance(agent.x, agent.y, food.x, food.y);
+    const startNode = new Node(agent.x, agent.y, null, 0, heuristic);
+
+    currentSearch.frontier = [startNode];
+}
+
+function greedySearchStep()
+{
+    if (currentSearch.frontier.length === 0)
+    {
+        searchInProgress = false;
+        return;
+    }
+    
+    // orders based on heuristic
+    currentSearch.frontier.sort((a, b) => a.heuristic - b.heuristic);
+    const currentNode = currentSearch.frontier.shift(); // lower heuristic
+    const currentStr = nodeToString(currentNode);
+    
+    if (currentSearch.visited.has(currentStr)) { return; } // already visited
+    currentSearch.visited.add(currentStr);
+
+    // found the food
+    if (currentNode.x === food.x && currentNode.y === food.y)
+    {
+        currentSearch.path = reconstructPath(currentNode);
+        agent.setPath(currentSearch.path);
+        searchInProgress = false;
+
+        return;
+    }
+    
+    // adding neighbors to the frontier array
+    for (let neighbor of getNeighbors(currentNode))
+    {
+        const neighborStr = nodeToString(neighbor);
+        if (!currentSearch.visited.has(neighborStr)) // not visited
+        {
+            const heuristic = manhattanDistance(neighbor.x, neighbor.y, food.x, food.y);
+            const neighborNode = new Node(neighbor.x, neighbor.y, currentNode, 0, heuristic);
+
+            currentSearch.frontier.push(neighborNode);
+        }
+    }
+}
+// endregion Greedy
