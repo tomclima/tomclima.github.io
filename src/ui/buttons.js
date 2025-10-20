@@ -1,5 +1,13 @@
 let started = false;
-let currentSearchType = "bfs";
+let currentSearchType;
+
+// loads all radio buttons as not checked
+window.addEventListener("load", () => {
+    document.querySelectorAll("input[type='radio']").forEach(radio => {
+        radio.checked = false;
+    });
+});
+
 
 // updates searchType accordingly to the radio buttons
 document.querySelectorAll('input[name="searchType"]').forEach(radio => {

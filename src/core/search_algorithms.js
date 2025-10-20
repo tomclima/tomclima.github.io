@@ -24,6 +24,7 @@ function getNeighbors(node)
 }
 
 
+// region BFS
 function initializeBFSSearch()
 {
     const startNode = new Node(agent.x, agent.y);
@@ -65,8 +66,10 @@ function bfsSearchStep()
         }
     }
 }
+// endregion BFS
 
 
+// region DFS
 function initializeDFSSearch()
 {
     const startNode = new Node(agent.x, agent.y);
@@ -108,3 +111,54 @@ function dfsSearchStep()
         }
     }
 }
+// endregion DFS
+
+
+// region UCS
+function initializeUCSSearch()
+{
+    const startNode = new Node(agent.x, agent.y, null, 0);
+    currentSearch.frontier = [startNode];
+}
+
+function ucsSearchStep()
+{
+    if (currentSearch.frontier.length === 0)
+    {
+        searchInProgress = false;
+        return;
+    }
+    
+    // orders the frontier array
+    currentSearch.frontier.sort((a, b) => a.cost - b.cost);
+    const currentNode = currentSearch.frontier.shift(); // lower cost
+    const currentStr = nodeToString(currentNode);
+    
+    if (currentSearch.visited.has(currentStr)) { return; }
+    currentSearch.visited.add(currentStr);
+    
+    // found the food
+    if (currentNode.x === food.x && currentNode.y === food.y)
+    {
+        currentSearch.path = reconstructPath(currentNode);
+        agent.setPath(currentSearch.path);
+        searchInProgress = false;
+
+        return;
+    }
+    
+    // adding neighbors to the frontier array
+    for (let neighbor of getNeighbors(currentNode))
+    {
+        const neighborStr = nodeToString(neighbor);
+        if (!currentSearch.visited.has(neighborStr)) // not visited
+        {
+            const terrainCost = TERRAIN_COSTS[grid[neighbor.y][neighbor.x]];
+            const newCost = currentNode.cost + terrainCost;
+            
+            const neighborNode = new Node(neighbor.x, neighbor.y, currentNode, newCost);
+            currentSearch.frontier.push(neighborNode);
+        }
+    }
+}
+// endregion UCS
