@@ -34,6 +34,9 @@ export function run_command(inputField){
                     console.log(element)
                 });
             }
+            else if (command == "home"){
+                window.location.replace("/")
+            }
             else if (command=="whoami"){
                 window.location.replace("/whoami")
             }
