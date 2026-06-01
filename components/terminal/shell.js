@@ -1,6 +1,7 @@
 let commandHistory = [];
 let historyIndex = -1;
 
+
 export function shell_history(inputField){
     
     inputField.addEventListener('keydown', function(e) {
@@ -32,6 +33,9 @@ export function run_command(inputField){
                     commandHistory.forEach(element => {
                     console.log(element)
                 });
+            }
+            else if (command=="whoami"){
+                window.location.replace("/whoami")
             }
             else if(command =="clear_history"){
                 commandHistory = [];
