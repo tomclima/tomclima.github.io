@@ -10,8 +10,7 @@ module.exports = function(eleventyConfig) {
             input: ".",         // Look in the root folder for pages/posts
             output: "_site"     // Spit out the finished website here
         },
-        pathPrefix: "/your-repository-name/",
-        markdownTemplateEngine: "njk",
+        pathPrefix: "/tomclima.github.io/",
         htmlTemplateEngine: "njk"
     };
 
