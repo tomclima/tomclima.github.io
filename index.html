@@ -1,44 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agente Autônomo com Busca</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
-    <link rel="stylesheet" href="./src/ui/style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Agente Autônomo com Busca</h1>
-        
-        <div class="controls">
-            <fieldset id="searchOptions">
-                <legend>Tipo de Busca</legend>
-                <label><input type="radio" name="searchType" value="bfs" checked> BFS</label>
-                <label><input type="radio" name="searchType" value="dfs"> DFS</label>
-                <label><input type="radio" name="searchType" value="ucs"> UCS</label> 
-                <label><input type="radio" name="searchType" value="greedy"> Greedy</label>
-                <label><input type="radio" name="searchType" value="astar"> A*</label>
-            </fieldset>
+---
+layout: base.njk
+---
 
-            <button id="btnStart" onclick="startSearch()">Iniciar</button>
-            <button id="resetEnvBtn" onclick="resetEnvironment()">Novo Mapa</button>
-        </div>
+<h1>have-a-good-day</h1>
+<p>Place where I dump my notes, ideas, thoughts and walkthroughs for hopefully many things</p>
+<hr>
 
-        <div class="info">
-            <p>Comidas coletadas: <span id="foodCount">0</span></p>
-            <p>Custo: <span id="totalCost">0</span></p>
-        </div>
 
-        <div id="canvasContainer"></div>
-    </div>
-
-    <script src="./src/ui/buttons.js"></script>
-    <script src="./src/core/globals.js"></script>
-    <script src="./src/core/classes/node.js"></script>
-    <script src="./src/core/classes/agent.js"></script>
-    <script src="./src/core/search_algorithms.js"></script>
-    <script src="./src/core/environment.js"></script>
-    <script src="./src/main.js"></script>
-</body>
-</html>
+<h2>All Posts</h2>
+<ul>
+    {%- for post in collections.txt -%}
+        <li>
+            <a href="{{ post.url }}">{{ post.data.title }}</a> 
+        </li>
+    {%- endfor -%}
+</ul>

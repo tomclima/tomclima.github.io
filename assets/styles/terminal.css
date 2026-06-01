@@ -1,0 +1,49 @@
+
+    /* Container that pins the terminal to the bottom of the screen */
+.mock-terminal-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #05070a; /* Slightly darker than main bg for depth */
+    border-top: 2px solid var(--font-color);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+    font-family: var(--font-stack);
+}
+
+/* Flexbox wrapper to align prompt symbol and text input horizontally */
+.mock-terminal-form {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto; /* Keeps it aligned with your main blog content width */
+    
+}
+
+/* Styling for the username/directory prompt text */
+.terminal-prompt {
+    color: var(--secondary-color); /* Uses your secondary bright green */
+    margin-right: 10px;
+    white-space: nowrap;
+    user-select: none; /* Prevents users from highlighting the prompt text */
+    
+    
+}
+
+/* Styling for the actual input field */
+.terminal-input {
+    flex-grow: 1;
+    background: transparent !important; /* Forces background to stay transparent */
+    border: none !important;             /* Strips the box border */
+    box-shadow: none !important;         /* Strips any inner browser shadows */
+    outline: none !important;            /* Removes the focus highlight ring */
+    color: var(--font-color);
+    font-family: var(--font-stack);
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    
+}

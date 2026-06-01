@@ -1,0 +1,51 @@
+:root {
+    /* Terminal.css accurate variables mapping */
+    --background-color: #0b0f12;       /* Pure dark canvas background */
+    --font-color: #39ff14;             /* Classic glowing neon green */
+    --primary-color: #39ff14;          /* Main link colors */
+    --secondary-color: #00ff66;        /* Subtle accents/captions */
+    --font-stack: "Courier New", Courier, monospace;
+}
+
+/* Enforce the dark styling across the page canvas */
+body {
+    background-color: var(--background-color) !important;
+    color: var(--font-color);
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Ensure links look correct over black background */
+a, a:visited {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+
+img {
+    /* Hard maximum dimension limits */
+    max-width: 600px;      /* Restricts the image width from exceeding 600px */
+    max-height: 400px;     /* Restricts the image height from exceeding 400px */
+    
+    /* Layout preservation */
+    width: auto;           /* Forces width to scale down proportionally based on max-height */
+    height: auto;          /* Forces height to scale down proportionally based on max-width */
+    object-fit: contain;   /* Ensures the image content fits cleanly within those limits without warping */
+    
+    /* Centering and spacing rules */
+    display: block;        
+    margin: 20px auto;     
+    
+    /* Optional Terminal Retro Styling */
+    border: 2px dashed var(--font-color);
+    padding: 5px;
+}
+
+body {
+    padding-bottom: 80px !important; 
+}

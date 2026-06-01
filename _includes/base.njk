@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
+    <link rel="stylesheet" href="/assets/styles/theme.css">
+    <link rel="stylesheet" href="/assets/styles/terminal.css">
+    
+    <title>{{ title }}</title>
+</head>
+<body>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    {% include "terminal.njk" %}
+
+</div>
+</body>
+</html>
