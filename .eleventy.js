@@ -1,6 +1,7 @@
 module.exports = function(eleventyConfig) {
     // Tell Eleventy to copy your assets folder directly to the output folder
     eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.addPassthroughCopy("components");
 
     return {
         dir: {

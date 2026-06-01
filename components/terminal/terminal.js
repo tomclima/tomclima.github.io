@@ -1,3 +1,4 @@
+// DRAGGING LOGIC
 const handle = document.querySelector('.terminal-resize-handle');
 const wrapper = document.querySelector('.terminal-wrapper');
 let isDragging = false;
@@ -29,3 +30,35 @@ window.addEventListener('mousemove', function(e) {
             handle.style.setProperty('bottom', (newHeight - 5) + 'px', 'important');
         }
     });
+
+
+
+// COMMAND HISTORY
+let commandHistory = [];
+let historyIndex = -1;
+
+const inputField = document.getElementById('terminal-input');
+
+inputField.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        const command = inputField.value.trim();
+        if (command) {
+            commandHistory.push(command);
+            historyIndex = commandHistory.length; // Reset index to the end of the history
+            inputField.value = ''; // Clear input after executing command
+        }
+    } else if (e.key === 'ArrowUp') {
+        if (historyIndex > 0) {
+            historyIndex--;
+            inputField.value = commandHistory[historyIndex];
+        }
+    } else if (e.key === 'ArrowDown') {
+        if (historyIndex < commandHistory.length - 1) {
+            historyIndex++;
+            inputField.value = commandHistory[historyIndex];
+        } else {
+            historyIndex = commandHistory.length; // Move index to the end
+            inputField.value = ''; // Clear input if we go past the last command
+        }
+    }
+});
