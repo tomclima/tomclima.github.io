@@ -17,4 +17,17 @@
     {% include "components/terminal/terminal.njk" %}
 
 </body>
+
+<script>
+    // Eleventy dumps the data straight into this variable during the build process
+    window.allPosts = [
+        {% for post in collections.txt %}
+        {
+            title: "{{ post.data.title | escape }}",
+            url: "{{ post.url }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ];
+</script>
+
 </html>

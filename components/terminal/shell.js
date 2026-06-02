@@ -58,6 +58,11 @@ export function run_command(inputField){
                 displayedCommands=[];
                 renderOutput();
             }
+            else if (command == "ls"){
+                window.allPosts.forEach((post) =>{
+                    displayedCommands.push(["ls", post.url])
+                })
+            }
             if(command){
                commandHistory.push(command);
                 historyIndex = commandHistory.length; // Reset index to the end of the history
@@ -82,7 +87,7 @@ export function renderOutput() {
 
         // 2. Create the prompt span and the command text span in memory
         const promptSpan = document.createElement('span');
-        promptSpan.className = 'terminal-output'; // Keeps your rotating block layout!
+        promptSpan.className = 'terminal-output'; 
 
         const textSpan = document.createElement('span');
         textSpan.className = 'command-text';
@@ -95,6 +100,9 @@ export function renderOutput() {
             promptSpan.textContent = 'tomclima@portfolio:~$';
 
         } 
+        if(type==="ls"){
+            textSpan.innerHTML= `<a href=${text}>${text}<\a>`
+        }
         line.appendChild(promptSpan);
         line.appendChild(textSpan);
 
@@ -104,8 +112,8 @@ export function renderOutput() {
 
     // Auto-scroll to the bottom
     const screen = document.querySelector('.terminal-screen');
+    saveStateToDisk();
     if (screen) {
         screen.scrollTop = screen.scrollHeight;
     }
-    saveStateToDisk();
 }
