@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "buffer_overflow.txt"
+title: "K17-phishing"
 date: 2026-06-01
 tags: txt, walkthrough
 ---
