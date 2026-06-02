@@ -3,7 +3,7 @@ const handle = document.querySelector('.terminal-resize-handle');
 const wrapper = document.querySelector('.terminal-wrapper');
 let isDragging = false;
 
-window.addEventListener('mousedown', function(e) {
+handle.addEventListener('mousedown', function(e) {
     isDragging = true;
     e.preventDefault(); // Prevent text selection while dragging
 });
