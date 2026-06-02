@@ -33,7 +33,7 @@ window.addEventListener('mousemove', function(e) {
 
 
 
-// COMMAND HISTORY
+// ACTUAL COMMAND LOGIC
 let commandHistory = [];
 let historyIndex = -1;
 
@@ -41,6 +41,8 @@ const inputField = document.getElementById('terminal-input');
 
 import { shell_history } from './shell.js';
 import { run_command } from './shell.js';
+import { renderOutput } from './shell.js';
 
 shell_history(inputField);
 run_command(inputField);
+renderOutput();

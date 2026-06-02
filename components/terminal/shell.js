@@ -1,6 +1,12 @@
-let commandHistory = [];
-let displayedCommands = [];
-let historyIndex = -1;
+let commandHistory = JSON.parse(localStorage.getItem('terminal_history')) || [];
+let displayedCommands = JSON.parse(localStorage.getItem('terminal_display')) || [];
+
+let historyIndex = commandHistory.length;
+
+function saveStateToDisk() {
+    localStorage.setItem('terminal_history', JSON.stringify(commandHistory));
+    localStorage.setItem('terminal_display', JSON.stringify(displayedCommands));
+}
 
 
 export function shell_history(inputField){
@@ -62,7 +68,7 @@ export function run_command(inputField){
 }
 
 
-function renderOutput() {
+export function renderOutput() {
     const outputTarget = document.querySelector('.terminal-output');
     if (!outputTarget) return;
 
@@ -101,4 +107,5 @@ function renderOutput() {
     if (screen) {
         screen.scrollTop = screen.scrollHeight;
     }
+    saveStateToDisk();
 }
