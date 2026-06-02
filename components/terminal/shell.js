@@ -62,6 +62,7 @@ export function run_command(inputField){
                 window.allPosts.forEach((post) =>{
                     displayedCommands.push(["ls", post.url])
                 })
+                renderOutput();
             }
             if(command){
                commandHistory.push(command);
