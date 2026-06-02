@@ -49,3 +49,18 @@ img {
 body {
     padding-bottom: 80px !important; 
 }
+
+p code, li code {
+    background-color: #1a1e24 !important; /* Dark terminal background fallback */
+    color: var(--secondary-color, #00ff00) !important; /* Terminal green text */
+    
+    /* Presentation details */
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 0, 0.2); /* Soft green border outline */
+    
+    /* Typography formatting */
+    font-family: var(--font-stack, monospace);
+    font-size: 0.9em;
+    word-break: break-word;
+}
