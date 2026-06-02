@@ -28,8 +28,8 @@
     position: fixed;
     bottom: calc(100px - 5px); /* 100px height minus half the handle thickness */
     left: 0;
-    width: 1%;
-    height: 1px; 
+    width: 100%;
+    height: 10px; 
     cursor: ns-resize; 
     background: transparent; /* Switch to red temporarily if you need to debug placement! */
     z-index: 10000; 
