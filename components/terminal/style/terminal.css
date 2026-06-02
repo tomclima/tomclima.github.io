@@ -13,7 +13,7 @@
     max-height: 80vh;
     
     /* 3. Ensure content doesn't break when small */
-    overflow: hidden; 
+    overflow: auto; 
     
     background-color: #05070a; 
     border-top: 2px solid var(--font-color);
@@ -21,6 +21,7 @@
     box-sizing: border-box;
     z-index: 9999;
     font-family: var(--font-stack);
+    scroll-behavior: smooth;
 }
 
 /* Ensure the handle positions perfectly relative to the 100px default height */
