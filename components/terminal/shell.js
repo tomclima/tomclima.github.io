@@ -1,4 +1,5 @@
 let commandHistory = [];
+let displayedCommands = [];
 let historyIndex = -1;
 
 
@@ -29,10 +30,13 @@ export function run_command(inputField){
 
         if (e.key === 'Enter') {
             const command = inputField.value.trim();
+            displayedCommands.push((["cmd", command]))
+            renderOutput()
             if(command=="history"){
                     commandHistory.forEach(element => {
-                    console.log(element)
+                    displayedCommands.push(["out", element])
                 });
+                renderOutput()
             }
             else if (command == "home"){
                 window.location.replace("/")
@@ -44,6 +48,10 @@ export function run_command(inputField){
                 commandHistory = [];
                 historyIndex=0;
             }
+            else if(command =="clear"){
+                displayedCommands=[];
+                renderOutput();
+            }
             if(command){
                commandHistory.push(command);
                 historyIndex = commandHistory.length; // Reset index to the end of the history
@@ -51,4 +59,46 @@ export function run_command(inputField){
             }
         }
     });
+}
+
+
+function renderOutput() {
+    const outputTarget = document.querySelector('.terminal-output');
+    if (!outputTarget) return;
+
+    // 1. Clear everything currently on the screen safely
+    outputTarget.innerHTML = '';
+
+    // Loop through the array and build an HTML element for each string
+    displayedCommands.forEach(([type, text]) => {
+        const line = document.createElement('div');
+        line.className = 'terminal-historic-line';
+
+        // 2. Create the prompt span and the command text span in memory
+        const promptSpan = document.createElement('span');
+        promptSpan.className = 'terminal-output'; // Keeps your rotating block layout!
+
+        const textSpan = document.createElement('span');
+        textSpan.className = 'command-text';
+        
+        // 3. Inject text safely using textContent to prevent script injections
+        textSpan.textContent = text;
+
+        // 4. Evaluate types correctly using triple equals (===)
+        if (type === "cmd") {
+            promptSpan.textContent = 'tomclima@portfolio:~$';
+
+        } 
+        line.appendChild(promptSpan);
+        line.appendChild(textSpan);
+
+        // 5. Send the securely constructed line directly to the terminal target
+        outputTarget.appendChild(line);
+    });
+
+    // Auto-scroll to the bottom
+    const screen = document.querySelector('.terminal-screen');
+    if (screen) {
+        screen.scrollTop = screen.scrollHeight;
+    }
 }

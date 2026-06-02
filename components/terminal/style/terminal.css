@@ -38,20 +38,35 @@
 .terminal-form {
     display: flex;
     align-items: center;
-    max-width: 800px;
+    max-width: 10000px;
     margin: 0 auto; 
 }
 
 /* Styling for the username/directory prompt text */
 .terminal-prompt {
     color: var(--secondary-color); 
-    margin-right: 10px;
+    margin-right: 0px;
     white-space: nowrap;
     user-select: none; 
 }
 
+
 /* Styling for the actual input field */
 .terminal-input {
+    flex-grow: 1;
+    background: transparent !important; 
+    border: none !important;             
+    box-shadow: none !important;         
+    outline: none !important;            
+    color: var(--font-color);
+    font-family: var(--font-stack);
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.terminal-output {
     flex-grow: 1;
     background: transparent !important; 
     border: none !important;             
