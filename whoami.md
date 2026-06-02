@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: "whoami"
+tags: txt
 date: 2026-06-01
 ---
 
