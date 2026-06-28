@@ -4,6 +4,7 @@ title: log4shell
 tags:
   - txt
   - study
+  - good
 ---
 #COMPSCI
 **Key concepts**: [[format string]], [[jndi injection]] 

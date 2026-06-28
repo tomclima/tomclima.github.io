@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Bandit23.md",
+                "file": "posts/log4shell.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Bandit23"
+              "title": "log4shell"
             }
           }
         ],
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "log4",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -103,7 +103,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -216,6 +217,7 @@
   },
   "active": "efa228ed381ef1d7",
   "lastOpenFiles": [
+    "posts/Bandit23.md",
     "posts/Bandit24.md",
     "posts/bandit25.md",
     "posts/bandit27.md",
@@ -241,7 +243,6 @@
     "posts/Untitled.md",
     "posts/template.md",
     "posts/Natas.md",
-    "posts/natas9.md",
     "Untitled.canvas",
     "posts/Untitled 2.base",
     "posts/Untitled 1.base",
