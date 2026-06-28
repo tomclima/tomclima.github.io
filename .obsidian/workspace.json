@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/bandit32.md",
+                "file": "posts/Bandit23.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "bandit32"
+              "title": "Bandit23"
             }
           }
         ],
@@ -216,8 +216,15 @@
   },
   "active": "efa228ed381ef1d7",
   "lastOpenFiles": [
-    "posts/bandit31.md",
+    "posts/Bandit24.md",
+    "posts/bandit25.md",
+    "posts/bandit27.md",
+    "posts/bandit28.md",
+    "posts/bandit29.md",
     "posts/bandit30.md",
+    "posts/bandit31.md",
+    "posts/bandit33.md",
+    "posts/bandit32.md",
     "posts/whoami.md",
     "posts/virtualização.md",
     "posts/Usb-Pico.md",
@@ -235,13 +242,6 @@
     "posts/template.md",
     "posts/Natas.md",
     "posts/natas9.md",
-    "posts/natas8.md",
-    "posts/natas7.md",
-    "posts/natas6.md",
-    "posts/natas5.md",
-    "posts/natas4.md",
-    "posts/natas3.md",
-    "posts/natas2.md",
     "Untitled.canvas",
     "posts/Untitled 2.base",
     "posts/Untitled 1.base",
