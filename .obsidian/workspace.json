@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "xor.md",
+                "file": "natas11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "xor"
+              "title": "natas11"
             }
           }
         ],
@@ -215,32 +215,32 @@
   },
   "active": "b5ea255cb60f721d",
   "lastOpenFiles": [
-    "whoami.md",
-    "virtualização.md",
-    "Usb-Pico.md",
+    "natas10.md",
+    "natas9.md",
+    "natas8.md",
+    "natas7.md",
+    "natas6.md",
+    "natas5.md",
+    "natas4.md",
+    "natas3.md",
+    "natas2.md",
+    "natas1.md",
+    "Natas.md",
+    "log4shell.md",
     "OverTheWire.md",
+    "natas11.md",
+    "bandit27.md",
+    "Setkeyboard.md",
+    "Usb-Pico.md",
+    "virtualização.md",
+    "whoami.md",
+    "xor.md",
     "README.md",
     "CTF.md",
     "Cron.md",
     "Complexity theory.md",
     "CMDI6.md",
     "chmod.md",
-    "bandit33.md",
-    "bandit32.md",
-    "bandit31.md",
-    "bandit30.md",
-    "bandit29.md",
-    "bandit28.md",
-    "bandit27.md",
-    "bandit25.md",
-    "Bandit21.md",
-    "Bandit.md",
-    "xor.md",
-    "transfer.sh",
-    "Setkeyboard.md",
-    "robots.txt.md",
-    "Natas.md",
-    "natas9.md",
-    "natas8.md"
+    "transfer.sh"
   ]
 }

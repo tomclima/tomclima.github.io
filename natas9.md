@@ -6,10 +6,6 @@ tags: txt
 #COMPSCI
 from: [[OverTheWire]]
 key concepts: [[php]], [[format string]]
-## Password
-```
-ZE1ck82lmdGIoErlhQgWND6j2Wzz6b6t
-```
 
 ## Solution
 format string vulnerability. you supply your search and its fed to the following structure

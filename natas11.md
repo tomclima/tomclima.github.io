@@ -6,10 +6,6 @@ tags: txt
 #COMPSCI
 from: [[OverTheWire]]
 key concepts: [[xor#reversibilidade]]
-## Password
-```
-UJdqkK1pTu6VLt9UHWAgRZz6sVUZ3lEk
-```
 
 ## Solution
 

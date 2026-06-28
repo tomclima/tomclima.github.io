@@ -6,10 +6,6 @@ tags: txt
 #COMPSCI
 from: [[OverTheWire]]
 key concepts: [[robots.txt]] [[web file structure]], [[web crawlers]]
-## Password
-```
-3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
-```
 
 ## Solution
 "not even google will be able to find this one"

@@ -6,10 +6,6 @@ tags: txt
 #COMPSCI
 from: [[OverTheWire]]
 key concepts: 
-## Password
-```
-t7I5VHvpa14sJTUGV0cbEsbYfFP2dmOu
-```
 
 ## Solution
 grep allows you to grep multiple files like

@@ -6,10 +6,6 @@ tags: txt
 #COMPSCI
 from: [[OverTheWire]]
 key concepts: [[]]
-## Password
-```
-TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI
-```
 
 ## Solution
 when you view source code, there is an image with src= 
