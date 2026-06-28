@@ -19,6 +19,20 @@
 </body>
 
 
+
+<script>
+    // Eleventy dumps the data straight into this variable during the build process
+    window.GoodPosts = [
+        {% for post in collections.good %}
+        {
+            title: "{{ post.data.title | escape }}",
+            url: "{{ post.url }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ];
+</script>
+
+
 <script>
     // Eleventy dumps the data straight into this variable during the build process
     window.writeups = [

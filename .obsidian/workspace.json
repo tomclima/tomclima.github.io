@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2026-06-01.md",
+                "file": "posts/bandit32.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "2026-06-01"
+              "title": "bandit32"
             }
           }
         ],
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "usb",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -214,19 +214,25 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "6771d44efeb4f3f3",
+  "active": "efa228ed381ef1d7",
   "lastOpenFiles": [
-    "posts/xor.md",
+    "posts/bandit31.md",
+    "posts/bandit30.md",
     "posts/whoami.md",
     "posts/virtualização.md",
     "posts/Usb-Pico.md",
     "posts/USB.md",
-    "posts/Untitled.md",
-    "posts/template.md",
     "posts/Setkeyboard.md",
+    "posts/SecCompanies.md",
     "posts/robots.txt.md",
     "posts/README.md",
     "posts/OverTheWire.md",
+    "posts/K17Phishing/K17phishing.md",
+    "posts/2026-06-01.md",
+    "USB.md",
+    "posts/xor.md",
+    "posts/Untitled.md",
+    "posts/template.md",
     "posts/Natas.md",
     "posts/natas9.md",
     "posts/natas8.md",
@@ -236,12 +242,6 @@
     "posts/natas4.md",
     "posts/natas3.md",
     "posts/natas2.md",
-    "posts/natas1.md",
-    "posts/natas11.md",
-    "posts/natas10.md",
-    "posts/log4shell.md",
-    "posts/jndi.md",
-    "posts/grammar.md",
     "Untitled.canvas",
     "posts/Untitled 2.base",
     "posts/Untitled 1.base",

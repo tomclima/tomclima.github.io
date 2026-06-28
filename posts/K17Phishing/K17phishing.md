@@ -1,8 +1,12 @@
 ---
 layout: base.njk
-title: "K17-phishing"
+title: K17-phishing
 date: 2026-06-01
-tags: txt, walkthrough
+tags:
+  - txt
+  - writeup
+  - k17
+  - good
 permalink: /posts/K17Phishing/K17phishing.html
 ---
 
