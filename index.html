@@ -8,6 +8,14 @@ layout: base.njk
 </p>
 <hr>
 
+<h2> Writeups </h2>
+<ul>
+    {%- for post in collections.writeup -%}
+        <li id="writeups">
+            <a href="{{ post.url }}">{{ post.data.title }}</a> 
+        </li>
+    {%- endfor -%}
+</ul>
 
 <h2>All Posts</h2>
 <ul>
