@@ -48,9 +48,57 @@
               "icon": "lucide-file",
               "title": "log4shell"
             }
+          },
+          {
+            "id": "b8bed543a0e892f2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/CTF resources.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "CTF resources"
+            }
+          },
+          {
+            "id": "35779bd7d84570d3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/Complexity theory.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Complexity theory"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -82,7 +130,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "log4",
+                "query": "complexi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -194,14 +242,23 @@
               "icon": "lucide-list",
               "title": "Outline of whoami"
             }
+          },
+          {
+            "id": "db79b8d96475fded",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,12 +269,17 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "efa228ed381ef1d7",
+  "active": "35779bd7d84570d3",
   "lastOpenFiles": [
     "posts/Bandit23.md",
+    "posts/Complexity theory.md",
+    "posts/Untitled 1.md",
+    "posts/CTF resources.md",
+    "posts/log4shell.md",
     "posts/Bandit24.md",
     "posts/bandit25.md",
     "posts/bandit27.md",
@@ -239,10 +301,6 @@
     "posts/K17Phishing/K17phishing.md",
     "posts/2026-06-01.md",
     "USB.md",
-    "posts/xor.md",
-    "posts/Untitled.md",
-    "posts/template.md",
-    "posts/Natas.md",
     "Untitled.canvas",
     "posts/Untitled 2.base",
     "posts/Untitled 1.base",

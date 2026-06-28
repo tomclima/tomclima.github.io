@@ -6,10 +6,6 @@ tags: txt
 #COMPSCI
 Key Concepts: [[Scripts]], [[chmod]]
 
-## senha do server
-```
-0Zf11ioIjMVN551jX3CmStKLYqjk54Ga 
-```
 # Solução 
 
 Semelhante ao [[Bandit22]], mas com um nível de complexidade a mais
